@@ -1,31 +1,35 @@
-// class Solution {
-//     public int[] topKFrequent(int[] nums, int k) {
-//         Map<Integer, Integer> hmap = new HashMap<>();
+ /*class Solution {
 
-//         for (int element : nums) {
-//             hmap.put(element, hmap.getOrDefault(element, 0) + 1);
-//         }
+ this solution uses array, would have worked if each element had unique frequency
+we need to use arraylist coz under each frq value, more than 1 element can come!!
 
-//         int[] arr = new int[nums.length];
+     public int[] topKFrequent(int[] nums, int k) {
+         Map<Integer, Integer> hmap = new HashMap<>();
 
-//         for (Map.Entry<Integer, Integer> entry : hmap.entrySet()) {
-//             arr[entry.getValue()] = entry.getKey();
-//         }
+         for (int element : nums) {
+             hmap.put(element, hmap.getOrDefault(element, 0) + 1);
+         }
 
-//         int[] newArr = new int[k];
-//         int i, j;
+         int[] arr = new int[nums.length];
 
-//         for (i = nums.length - 1, j = 0; i >= 0 && j < k; i--, j++) {
-//             if (arr[i] != 0) {
-//                 newArr[j] = arr[i];
-//             }
-//         }
+         for (Map.Entry<Integer, Integer> entry : hmap.entrySet()) {
+             arr[entry.getValue()] = entry.getKey();
+         }
 
-//         return newArr;
+         int[] newArr = new int[k];
+         int i, j;
+
+         for (i = nums.length - 1, j = 0; i >= 0 && j < k; i--, j++) {
+             if (arr[i] != 0) {
+                 newArr[j] = arr[i];
+             }
+         }
+
+         return newArr;
 
 
-//     }
-// }
+     }
+ }*/
 import java.util.*;
 
 class Solution {
